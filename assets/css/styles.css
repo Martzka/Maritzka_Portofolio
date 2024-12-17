@@ -291,16 +291,25 @@ img {
   z-index: var(--z-back);
 }
 .skills__html {
-  width: 95%;
+  width: 90%;
 }
 .skills__css {
-  width: 85%;
+  width: 90%;
 }
 .skills__js {
-  width: 65%;
+  width: 80%;
 }
 .skills__ux {
-  width: 85%;
+  width: 80%;
+}
+/* Untuk membulatkan sudut gambar */
+.skills__img {
+  border-radius: 0.5rem;
+  width: 100%; /* Sesuaikan ukuran gambar sesuai kebutuhan */
+  height: auto;
+  animation: slide 5s infinite; /* Durasi animasi */
+  transition: transform 0.5s ease;
+  overflow: hidden;
 }
 .skills__img {
   border-radius: 0.5rem;
@@ -320,6 +329,9 @@ img {
 }
 .work__img img:hover {
   transform: scale(1.1);
+}
+.work_text {
+  text-align: center;
 }
 
 /* ===== CONTACT =====*/
@@ -408,13 +420,24 @@ img {
     column-gap: 2rem;
     padding-top: 2rem;
   }
-  .contact__form {
-    width: 360px;
-    padding-top: 2rem;
-  }
+ 
   .contact__container {
-    justify-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
   }
+  
+  .contact_email {
+    font-weight: bold;
+    text-align: left;
+  }
+  
+  .contact_telp {
+    font-weight: bold;
+    text-align: right;
+  }
+  
 }
 @media screen and (min-width: 768px) {
   body {
